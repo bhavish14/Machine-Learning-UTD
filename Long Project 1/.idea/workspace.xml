@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="62316402-c42b-417b-804d-e9f3058ef6b0" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="2026398616">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="4" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="csv" value="5" />
+          <entry key="py" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSV" value="4" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="12064" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="12064" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Scripts/deng.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+              <folding>
+                <element signature="e#19#37#0" expanded="true" />
+                <element signature="e#1079#2181#0" />
+                <element signature="e#1470#2912#0" />
+                <element signature="e#2941#3555#0" />
+                <element signature="e#3587#3617#0" />
+                <element signature="e#4462#4989#0" />
+                <element signature="e#4108#4290#0" />
+                <element signature="e#5289#5492#0" />
+                <element signature="e#4363#4404#0" />
+                <element signature="e#5582#6002#0" />
+                <element signature="e#6051#6174#0" />
+                <element signature="e#4984#5022#0" />
+                <element signature="e#6290#6744#0" />
+                <element signature="e#6777#6902#0" />
+                <element signature="e#5851#5873#0" />
+                <element signature="e#7048#7579#0" />
+                <element signature="e#7614#7764#0" />
+                <element signature="e#6859#6905#0" />
+                <element signature="e#7880#8380#0" />
+                <element signature="e#8410#8555#0" />
+                <element signature="e#10009#10667#0" />
+                <marker date="1543716419175" expanded="false" signature="4351:4352" ph="..." />
+                <marker date="1543716419175" expanded="true" signature="4958:5428" ph="..." />
+                <marker date="1543716419175" expanded="true" signature="5176:5178" ph="..." />
+                <marker date="1543716419175" expanded="true" signature="8572:8574" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scripts/DengAIColabNote.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-14">
+              <caret line="97" column="66" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>import numpy as np\nimport pandas as pd\nimport re\n\nfrom sklearn\.preprocessing import LabelEncoder\nfrom sklearn\.preprocessing import MinMaxScaler\nfrom sklearn\.model_selection import train_test_split\n\nimport matplotlib\.pyplot as plt\nimport seaborn as sns\nfrom string import ascii_letters\n\n\# Models\nfrom sklearn\.tree import DecisionTreeRegressor\nfrom sklearn\.svm import SVC\nfrom sklearn\.ensemble import RandomForestClassifier\n\n\# Evaluation Metrics\nfrom sklearn\.metrics import accuracy_score\n\nclass dengAi\(\)\:\n    def __init__\(self\, train_path\, train_names\, train_results_path\, train_result_names\, path_test\, path_test_results\)\:\n        self\.X_train \= pd\.read_csv\(\n            train_path\, names \= train_names\, header \= None\, skiprows \= 1\, index_col\= \[0\, 1\, 2\]\n        \)\n        self\.y_train \= pd\.read_csv\(\n            train_results_path\, names \= train_result_names\, header \= None\, skiprows \= 1\, index_col\= \[0\, 1\, 2\]\n        \)\n        self\.correlation_matrix \= 0\n        self\.train_features \= train_names\n\n\n    def preprocess_data\(self\)\:\n\	\	self\.sj_train_features \= self\.X_train\.loc\[\'sj\'\]\n\	\	self\.sj_train_labels \= self\.y_train\.loc\[\'sj\'\]\n\n\	\	self\.iq_train_features \= self\.X_train\.loc\[\'iq\'\]\n\	\	self\.iq_train_labels \= self\.y_train\.loc\[\'iq\'\]\n\n\	\	\# Removing col 3 from the training data\n\	\	self\.sj_train_features\.drop\(\'week_start_date\'\, axis\=1\, inplace\=True\)\n\	\	self\.iq_train_features\.drop\(\'week_start_date\'\, axis\=1\, inplace\=True\)\n\n\	\	\# Check for Null values\n\	\	if pd\.isnull\(self\.sj_train_features\)\.any\(\)\:\n\	\	self\.sj_train_features\.fillna\(method \= \'ffill\'\, inplace \= True\)\n\	\	if pd\.isnull\(self\.iq_train_features\)\.any\(\)\:\n\	\	self\.iq_train_features\.fillna\(method \= \'ffill\'\, inpalce \= True\)\n\n\	\	\# Appending total_cases to the sj_train_features and iq_train_features dataframe to compute correlation\n\n\n\n\n\n\ndef main\(\)\:\n\n    path_train \= \&quot;\/Users\/bhavish96\.n\/Documents\/UTD\/Fall \'18\/Machine Learning \[Anurag Nagar\]\/Assignments\/Long Project 1\/Project Data\/dengue_features_train\.csv\&quot;\n    train_names \= \[\'city\'\, \'year\'\, \'weekofyear\'\, \'week_start_date\'\, \'ndvi_ne\'\, \'ndvi_nw\'\,\n    \'ndvi_se\'\, \'ndvi_sw\'\, \'precipitation_amt_mm\'\, \'reanalysis_air_temp_k\'\, \'reanalysis_avg_temp_k\'\,\n    \'reanalysis_dew_point_temp_k\'\, \'reanalysis_max_air_temp_k\'\, \'reanalysis_min_air_temp_k\'\,\n    \'reanalysis_precip_amt_kg_per_m2\'\, \'reanalysis_relative_humidity_percent\'\, \'reanalysis_sat_precip_amt_mm\'\,\n    \'reanalysis_specific_humidity_g_per_kg\'\, \'reanalysis_tdtr_k\'\, \'station_avg_temp_c\'\,\n    \'station_diur_temp_rng_c\'\, \'station_max_temp_c\'\, \'station_min_temp_c\'\, \'station_precip_mm\'\]\n\n    path_train_results \= \&quot;\/Users\/bhavish96\.n\/Documents\/UTD\/Fall \'18\/Machine Learning \[Anurag Nagar\]\/Assignments\/Long Project 1\/Project Data\/dengue_labels_train\.csv\&quot;\n    train_result_names \= \&quot;city\	year\	weekofyear\	total_cases\&quot;\.split\(\)\n\n    path_test \= \&quot;\&quot;\n    path_test_results \= \&quot;\&quot;\n\n\n    deng_object \= dengAi\(path_train\, train_names\, path_train_results\, train_result_names\, path_test\, path_test_results\)\n    deng_object\.preprocess_data\(\)\n\nif __name__ \=\= \'__main__\'\:\n    main\(\)\n</find>
+      <find>y_vals</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Scripts/dengAi.py" />
+        <option value="$PROJECT_DIR$/Scripts/DengAIColabNote.py" />
+        <option value="$PROJECT_DIR$/Scripts/test.py" />
+        <option value="$PROJECT_DIR$/Scripts/deng.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyCompatibilityInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Long Project 1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Long Project 1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Long Project 1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Long Project 1" type="462c0819:PsiDirectoryNode" />
+              <item name="Project Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Long Project 1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Long Project 1" type="462c0819:PsiDirectoryNode" />
+              <item name="Scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.deng">
+    <configuration name="deng" type="PythonConfigurationType" factoryName="Python">
+      <module name="Long Project 1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/deng.py" />
+      <option name="PARAMETERS" value="-W ignore" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dengAi" type="PythonConfigurationType" factoryName="Python">
+      <module name="Long Project 1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/dengAi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="deng_jay" type="PythonConfigurationType" factoryName="Python">
+      <module name="Long Project 1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/DengAIColabNote.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python">
+      <module name="Long Project 1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scripts" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scripts/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.dengAi" />
+      <item itemvalue="Python.deng" />
+      <item itemvalue="Python.deng_jay" />
+      <item itemvalue="Python.test" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="62316402-c42b-417b-804d-e9f3058ef6b0" name="Default Changelist" comment="" />
+      <created>1543215146237</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543215146237</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17277168" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32941177" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Scripts/dengAi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1281">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/data_visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="82" column="83" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/deng_ai.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project Data/dengue_labels_train.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="156" column="3" selection-start-line="156" selection-start-column="3" selection-end-line="156" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project Data/dengue_features_test.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state>
+          <caret column="44" selection-start-column="37" selection-end-column="44" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/DengAIColabNote.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="97" column="66" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/deng.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+          <folding>
+            <element signature="e#19#37#0" expanded="true" />
+            <element signature="e#1079#2181#0" />
+            <element signature="e#1470#2912#0" />
+            <element signature="e#2941#3555#0" />
+            <element signature="e#3587#3617#0" />
+            <element signature="e#4462#4989#0" />
+            <element signature="e#4108#4290#0" />
+            <element signature="e#5289#5492#0" />
+            <element signature="e#4363#4404#0" />
+            <element signature="e#5582#6002#0" />
+            <element signature="e#6051#6174#0" />
+            <element signature="e#4984#5022#0" />
+            <element signature="e#6290#6744#0" />
+            <element signature="e#6777#6902#0" />
+            <element signature="e#5851#5873#0" />
+            <element signature="e#7048#7579#0" />
+            <element signature="e#7614#7764#0" />
+            <element signature="e#6859#6905#0" />
+            <element signature="e#7880#8380#0" />
+            <element signature="e#8410#8555#0" />
+            <element signature="e#10009#10667#0" />
+            <marker date="1543716419175" expanded="false" signature="4351:4352" ph="..." />
+            <marker date="1543716419175" expanded="true" signature="4958:5428" ph="..." />
+            <marker date="1543716419175" expanded="true" signature="5176:5178" ph="..." />
+            <marker date="1543716419175" expanded="true" signature="8572:8574" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
